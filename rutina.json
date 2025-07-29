@@ -1,7 +1,7 @@
 {
   "1": [
     {
-      "EJERCICIO": "Abdominal plancha isométrico en fitball",
+      "EJERCICIO": "Abdominal Plancha [Fitball]",
       "POSICIÓN": "Colchoneta",
       "SERIES": 3,
       "REPETICIONES": "30 [s]",
@@ -21,7 +21,7 @@
       "ID": "1_1"
     },
     {
-      "EJERCICIO": "Abdominal con rueda despacio",
+      "EJERCICIO": "Abdominal Rueda",
       "POSICIÓN": "Colchoneta",
       "SERIES": 3,
       "REPETICIONES": "6 a 12",
@@ -41,7 +41,7 @@
       "ID": "1_2"
     },
     {
-      "EJERCICIO": "Abdominal escalador brazos en exten",
+      "EJERCICIO": "Abdominal Escalador [Brazos Extensión]",
       "POSICIÓN": "Colchoneta",
       "SERIES": 3,
       "REPETICIONES": "8 por lado",
@@ -61,7 +61,7 @@
       "ID": "1_3"
     },
     {
-      "EJERCICIO": "Press de pecho máquina",
+      "EJERCICIO": "Press Pecho [Máquina]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "15, 10, 8 y 8",
@@ -82,7 +82,7 @@
       "ID": "1_4"
     },
     {
-      "EJERCICIO": "Press de pecho banco plano con barra olímpica (mancuerna)",
+      "EJERCICIO": "Press Pecho [Banco Plano] [Barra Olímpica]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "8",
@@ -103,7 +103,7 @@
       "ID": "1_5"
     },
     {
-      "EJERCICIO": "Press de pecho incl con mancuerna",
+      "EJERCICIO": "Press Pecho [Inclinado] [Mancuerna]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "8 a 10",
@@ -124,7 +124,7 @@
       "ID": "1_6"
     },
     {
-      "EJERCICIO": "Apertura máquina",
+      "EJERCICIO": "Aperturas [Máquina]",
       "POSICIÓN": "-",
       "SERIES": 3,
       "REPETICIONES": "8 a 10",
@@ -145,7 +145,7 @@
       "ID": "1_7"
     },
     {
-      "EJERCICIO": "Flexión de codo normales o con piernas flex",
+      "EJERCICIO": "Flexión de Codo",
       "POSICIÓN": "Colchoneta",
       "SERIES": 3,
       "REPETICIONES": "8 a 12",
@@ -165,7 +165,7 @@
       "ID": "1_8"
     },
     {
-      "EJERCICIO": "Bíceps con barra",
+      "EJERCICIO": "Bíceps Polea [Barra]",
       "POSICIÓN": "De pie",
       "SERIES": 4,
       "REPETICIONES": "8 a 10",
@@ -185,7 +185,7 @@
       "ID": "1_9"
     },
     {
-      "EJERCICIO": "Bco scott con barra",
+      "EJERCICIO": "Banco Scott [Barra]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "8 a 10",
@@ -205,7 +205,7 @@
       "ID": "1_10"
     },
     {
-      "EJERCICIO": "Bíceps tipo martillo simultáneo con mancuerna",
+      "EJERCICIO": "Bíceps Martillo [Simultaneo] [Mancuernas]",
       "POSICIÓN": "Sentado",
       "SERIES": 4,
       "REPETICIONES": "10",
@@ -227,7 +227,7 @@
   ],
   "2": [
     {
-      "EJERCICIO": "JALON DORSAL X DELANTE TOMADA EN PRONO CON BARRA",
+      "EJERCICIO": "Jalón Dorsal [Prono] [Barra]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "15, 10, 8 y 8",
@@ -248,7 +248,7 @@
       "ID": "2_1"
     },
     {
-      "EJERCICIO": "Remo incl con barra tomada en supino",
+      "EJERCICIO": "Remo Inclinado [Barra] [Supino]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "10",
@@ -269,7 +269,7 @@
       "ID": "2_2"
     },
     {
-      "EJERCICIO": "Remo en polea bajo con triangulo",
+      "EJERCICIO": "Remo Polea Baja [Triángulo]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "10 a 15",
@@ -290,7 +290,7 @@
       "ID": "2_3"
     },
     {
-      "EJERCICIO": "Pullover en polea con cuerda o barra",
+      "EJERCICIO": "Pullover Polea [Cuerda o Barra]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "10 a 15",
@@ -311,7 +311,7 @@
       "ID": "2_4"
     },
     {
-      "EJERCICIO": "Tríceps polea con cuerda",
+      "EJERCICIO": "Tríceps Polea [Cuerda]",
       "POSICIÓN": "De pie",
       "SERIES": 4,
       "REPETICIONES": "12 a 15",
@@ -331,7 +331,7 @@
       "ID": "2_5"
     },
     {
-      "EJERCICIO": "Tríceps copa con 1 mancuerna",
+      "EJERCICIO": "Tríceps Copa [Mancuerna]",
       "POSICIÓN": "Sentado",
       "SERIES": 4,
       "REPETICIONES": "10 a 15",
@@ -351,7 +351,7 @@
       "ID": "2_6"
     },
     {
-      "EJERCICIO": "Press francés con barra o mancuerna simultáneo",
+      "EJERCICIO": "Press Francés [Barra]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "10 a 15",
@@ -374,7 +374,7 @@
   ],
   "3": [
     {
-      "EJERCICIO": "Pantorrilla de pie unilateral con 1 mancuerna",
+      "EJERCICIO": "Pantorrilla Unilateral [Mancuerna]",
       "POSICIÓN": "STEP",
       "SERIES": 3,
       "REPETICIONES": "15 x lado",
@@ -394,7 +394,7 @@
       "ID": "3_1"
     },
     {
-      "EJERCICIO": "Pantorrilla gemelo sentado en máquina",
+      "EJERCICIO": "Pantorrilla Gemelo [Máquina]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "15",
@@ -414,7 +414,7 @@
       "ID": "3_2"
     },
     {
-      "EJERCICIO": "Camilla de isquiotibial",
+      "EJERCICIO": "Camilla Isquiotibial",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "8 a 10",
@@ -435,7 +435,7 @@
       "ID": "3_3"
     },
     {
-      "EJERCICIO": "Peso muerto con barra",
+      "EJERCICIO": "Peso Muerto [Barra]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "8 a 10",
@@ -456,7 +456,7 @@
       "ID": "3_4"
     },
     {
-      "EJERCICIO": "Sentadilla en máquina Mf o libre",
+      "EJERCICIO": "Sentadilla [Máquina o Libre]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "15, 10, 8 y 8",
@@ -477,7 +477,7 @@
       "ID": "3_5"
     },
     {
-      "EJERCICIO": "Prensa de piernas a 45°",
+      "EJERCICIO": "Prensa Piernas [45°]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "15, 10, 8 y 8",
@@ -497,7 +497,7 @@
       "ID": "3_6"
     },
     {
-      "EJERCICIO": "JAKA",
+      "EJERCICIO": "Sentadilla Hack Squat [JAKA]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "15",
@@ -519,7 +519,7 @@
   ],
   "4": [
     {
-      "EJERCICIO": "Abdominal plancha isométrico en fitball",
+      "EJERCICIO": "Abdominal Plancha [Fitball]",
       "POSICIÓN": "Colchoneta",
       "SERIES": 3,
       "REPETICIONES": "30 [s]",
@@ -539,7 +539,7 @@
       "ID": "4_1"
     },
     {
-      "EJERCICIO": "Abdominal con rueda despacio",
+      "EJERCICIO": "Abdominal Rueda",
       "POSICIÓN": "Colchoneta",
       "SERIES": 3,
       "REPETICIONES": "6 a 12",
@@ -559,7 +559,7 @@
       "ID": "4_2"
     },
     {
-      "EJERCICIO": "Abdominal escalador brazos en exten",
+      "EJERCICIO": "Abdominal Escalador [Brazos Extensión]",
       "POSICIÓN": "Colchoneta",
       "SERIES": 3,
       "REPETICIONES": "8 por lado",
@@ -579,7 +579,7 @@
       "ID": "4_3"
     },
     {
-      "EJERCICIO": "Press de hombro con mancuerna",
+      "EJERCICIO": "Press Hombro [Mancuerna]",
       "POSICIÓN": "Sentado",
       "SERIES": 4,
       "REPETICIONES": "8 a 10",
@@ -600,7 +600,7 @@
       "ID": "4_4"
     },
     {
-      "EJERCICIO": "Press militar con barra",
+      "EJERCICIO": "Press Militar [Barra]",
       "POSICIÓN": "-",
       "SERIES": 4,
       "REPETICIONES": "8",
@@ -620,7 +620,7 @@
       "ID": "4_5"
     },
     {
-      "EJERCICIO": "Elev frontal en polea con cuerda",
+      "EJERCICIO": "Elevación Frontal Polea [Cuerda]",
       "POSICIÓN": "De pie",
       "SERIES": 4,
       "REPETICIONES": "12 a 15",
@@ -640,7 +640,7 @@
       "ID": "4_6"
     },
     {
-      "EJERCICIO": "Elev lateral con mancuerna",
+      "EJERCICIO": "Elevación Lateral [Mancuerna]",
       "POSICIÓN": "De pie",
       "SERIES": 4,
       "REPETICIONES": "8",
@@ -660,7 +660,7 @@
       "ID": "4_7"
     },
     {
-      "EJERCICIO": "Remo al mentón con barra",
+      "EJERCICIO": "Remo al Mentón [Barra]",
       "POSICIÓN": "De pie",
       "SERIES": 4,
       "REPETICIONES": "8 a 10",
@@ -680,7 +680,7 @@
       "ID": "4_8"
     },
     {
-      "EJERCICIO": "Press de hombro (trapecio) con mancuerna o disco",
+      "EJERCICIO": "Press Hombro Trapecio [Mancuerna o Disco]",
       "POSICIÓN": "De pie",
       "SERIES": 4,
       "REPETICIONES": "12 a 15",
@@ -700,7 +700,7 @@
       "ID": "4_9"
     },
     {
-      "EJERCICIO": "FACE PULL CON CUERDA DESPACIO",
+      "EJERCICIO": "Face Pull [Cuerda]",
       "POSICIÓN": "De pie",
       "SERIES": 4,
       "REPETICIONES": "8 a 10",
