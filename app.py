@@ -7,6 +7,11 @@ from flask import Flask, render_template, request, redirect, url_for, session
 app = Flask(__name__)
 app.secret_key = 'change-me'
 
+# Make the current username available in every template
+@app.context_processor
+def inject_username():
+    return {'username': session.get('username')}
+
 def slugify(value: str) -> str:
     value = value.lower()
     value = unicodedata.normalize('NFKD', value)

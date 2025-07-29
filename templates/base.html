@@ -38,6 +38,10 @@
   </div>
 </div>
 {% block content %}{% endblock %}
+<script>
+  // Expose the current username to client-side scripts
+  window.username = {{ (username or '')|tojson }};
+</script>
 <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>

@@ -4,21 +4,25 @@ let totalTimer;
 window.restStart = null;
 let restDuration = 0;
 
+function key(name) {
+  return window.username ? `${name}_${window.username}` : name;
+}
+
 function saveTotal() {
   if (window.totalStart !== null) {
-    localStorage.setItem('totalStart', window.totalStart.toString());
+    localStorage.setItem(key('totalStart'), window.totalStart.toString());
   } else {
-    localStorage.removeItem('totalStart');
+    localStorage.removeItem(key('totalStart'));
   }
 }
 
 function saveRest() {
   if (window.restStart !== null && restDuration > 0) {
-    localStorage.setItem('restStart', window.restStart.toString());
-    localStorage.setItem('restDuration', restDuration.toString());
+    localStorage.setItem(key('restStart'), window.restStart.toString());
+    localStorage.setItem(key('restDuration'), restDuration.toString());
   } else {
-    localStorage.removeItem('restStart');
-    localStorage.removeItem('restDuration');
+    localStorage.removeItem(key('restStart'));
+    localStorage.removeItem(key('restDuration'));
   }
 }
 
@@ -71,7 +75,7 @@ function updateTotal() {
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('start-btn');
   const finishBtn = document.getElementById('finish-btn');
-  const savedTotal = localStorage.getItem('totalStart');
+  const savedTotal = localStorage.getItem(key('totalStart'));
   if (savedTotal) {
     window.totalStart = parseInt(savedTotal, 10);
     updateTotal();
@@ -83,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (finishBtn) finishBtn.addEventListener('click', finishRoutine);
 
-  const rs = localStorage.getItem('restStart');
-  const rd = localStorage.getItem('restDuration');
+  const rs = localStorage.getItem(key('restStart'));
+  const rd = localStorage.getItem(key('restDuration'));
   if (rs && rd) {
     window.restStart = parseInt(rs, 10);
     restDuration = parseInt(rd, 10);
