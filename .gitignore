@@ -1,0 +1,7 @@
+# Ignore macOS Finder files
+.DS_Store
+static/.DS_Store
+static/img/.DS_Store
+static/img/1/.DS_Store
+# Generic rule to ignore .DS_Store everywhere
+**/.DS_Store
