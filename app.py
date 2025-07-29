@@ -2,7 +2,7 @@ import json
 import os
 import re
 import unicodedata
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 
 app = Flask(__name__)
 app.secret_key = 'change-me'
@@ -95,9 +95,16 @@ def toggle(day, idx):
         return ('', 400)
     user_state = get_user_state(username)
     state_day = user_state.setdefault(day, {})
-    state_day[str(idx)] = not state_day.get(str(idx), False)
+    data = request.get_json(silent=True) or {}
+    value = data.get('state')
+    checked = False
+    if isinstance(value, str):
+        checked = value == 'checked'
+    elif isinstance(value, bool):
+        checked = value
+    state_day[str(idx)] = checked
     save_state()
-    return ('', 204)
+    return jsonify({str(idx): checked})
 
 # New endpoint to reset all checkboxes for a day
 @app.route('/reset/<day>', methods=['POST'])
