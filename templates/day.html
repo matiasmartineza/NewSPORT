@@ -29,6 +29,11 @@
   window.totalExercises = {{ exercises|length }};
   document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
     cb.addEventListener('change', () => {
+      if (cb.checked && window.totalStart === null) {
+        alert('Por favor inicia la rutina antes de marcar ejercicios como realizados.');
+        cb.checked = false;
+        return;
+      }
       fetch(`/toggle/${dayId}/${cb.dataset.idx}`, {method: 'POST'});
     });
   });
