@@ -2,9 +2,10 @@ import json
 import os
 import re
 import unicodedata
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
+app.secret_key = 'change-me'
 
 def slugify(value: str) -> str:
     value = value.lower()
@@ -34,57 +35,90 @@ def load_state():
         except Exception:
             pass
     # default empty state
-    return {d: {} for d in ["1", "2", "3", "4"]}
+    return {}
 
-def save_state(state):
+def save_state():
     with open(STATE_FILE, 'w', encoding='utf-8') as f:
-        json.dump(state, f)
+        json.dump(STATE, f)
+
+def get_user_state(username):
+    user = STATE.setdefault(username, {d: {} for d in ["1", "2", "3", "4"]})
+    return user
 
 STATE = load_state()
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+        username = slugify(request.form.get('username', ''))
+        if username:
+            session['username'] = username
+        return redirect(url_for('index'))
+
+    username = session.get('username')
+    if not username:
+        return render_template('login.html')
+
     days = ["1", "2", "3", "4"]
-    return render_template('index.html', days=days)
+    return render_template('index.html', days=days, username=username)
 
 @app.route('/day/<day>', methods=['GET'])
 def day_view(day):
+    username = session.get('username')
+    if not username:
+        return redirect(url_for('index'))
+    user_state = get_user_state(username)
     exercises = ROUTINES.get(day, [])
-    done = STATE.get(day, {})
+    done = user_state.get(day, {})
     return render_template('day.html', day=day, exercises=exercises, done=done)
 
 @app.route('/toggle/<day>/<int:idx>', methods=['POST'])
 def toggle(day, idx):
-    state_day = STATE.setdefault(day, {})
+    username = session.get('username')
+    if not username:
+        return ('', 400)
+    user_state = get_user_state(username)
+    state_day = user_state.setdefault(day, {})
     state_day[str(idx)] = not state_day.get(str(idx), False)
-    save_state(STATE)
+    save_state()
     return ('', 204)
 
 # New endpoint to reset all checkboxes for a day
 @app.route('/reset/<day>', methods=['POST'])
 def reset_day(day):
     """Clear the saved state for the given day."""
-    STATE[day] = {}
-    save_state(STATE)
+    username = session.get('username')
+    if not username:
+        return ('', 400)
+    user_state = get_user_state(username)
+    user_state[day] = {}
+    save_state()
     return ('', 204)
 
 @app.route('/exercise/<day>/<int:idx>', methods=['GET', 'POST'])
 def exercise_view(day, idx):
+    username = session.get('username')
+    if not username:
+        return redirect(url_for('index'))
+    user_state = get_user_state(username)
     exercises = ROUTINES.get(day, [])
     if idx < 0 or idx >= len(exercises):
         return redirect(url_for('day_view', day=day))
     exercise = exercises[idx]
     if request.method == 'POST':
-        state_day = STATE.setdefault(day, {})
+        state_day = user_state.setdefault(day, {})
         state_day[str(idx)] = True
-        save_state(STATE)
+        save_state()
         return redirect(url_for('day_view', day=day))
-    done = STATE.get(day, {}).get(str(idx), False)
+    done = user_state.get(day, {}).get(str(idx), False)
     return render_template('exercise.html', day=day, idx=idx, exercise=exercise, done=done)
 
 @app.route('/summary/<day>', methods=['GET', 'POST'])
 def summary(day):
     """Show summary of completed exercises for the given day."""
+    username = session.get('username')
+    if not username:
+        return redirect(url_for('index'))
     exercises = ROUTINES.get(day, [])
     done_param = request.values.get('done', '')
     time_param = request.values.get('time', '0')
@@ -113,7 +147,8 @@ def summary(day):
     time_str = f"{m}:{s:02}"
 
     return render_template('summary.html', day=day, time=time_str,
-                           percent=percent, muscles=muscles, counts=counts)
+                           percent=percent, muscles=muscles, counts=counts,
+                           username=username)
 
 if __name__ == '__main__':
     app.run(debug=True)

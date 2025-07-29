@@ -1,14 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>¡Felicidades!</h1>
+<h1>¡Felicidades, {{ username }}!</h1>
 <p>Completaste {{ percent }}% de la rutina en {{ time }}.</p>
 {% if muscles %}
-<p>Trabajaste los siguientes grupos musculares:</p>
-<ul>
-  {% for m in muscles %}
-  <li>{{ m }}</li>
-  {% endfor %}
-</ul>
 <canvas id="muscleChart" width="300" height="300"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
@@ -19,6 +13,9 @@ new Chart(ctx, {
   data: {
     labels: Object.keys(counts),
     datasets: [{ data: Object.values(counts) }]
+  },
+  options: {
+    plugins: { legend: { display: true } }
   }
 });
 </script>
