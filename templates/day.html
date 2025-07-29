@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Rutina día {{ day }}</h1>
+{% if exercises %}
+<table class="day-table">
+  <thead>
+    <tr><th>✓</th><th>Ejercicio</th><th>Reps</th><th>Series</th></tr>
+  </thead>
+  <tbody>
+  {% for e in exercises %}
+  <tr>
+    <td><input type="checkbox" data-idx="{{ loop.index0 }}" {% if done.get(loop.index0|string) %}checked{% endif %}></td>
+    <td><a href="{{ url_for('exercise_view', day=day, idx=loop.index0) }}">{{ e['EJERCICIO'] }}</a></td>
+    <td>{{ e['REPETICIONES'] }}</td>
+    <td>{{ e['SERIES'] }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No hay datos para este día.</p>
+{% endif %}
+<script>
+  const dayId = '{{ day }}';
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      fetch(`/toggle/${dayId}/${cb.dataset.idx}`, {method: 'POST'});
+    });
+  });
+</script>
+{% endblock %}

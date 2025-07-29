@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ exercise['EJERCICIO'] }}</h2>
+<ul>
+  <li>Posición: {{ exercise['POSICIÓN'] }}</li>
+  <li>Series: {{ exercise['SERIES'] }}</li>
+  <li>Repeticiones: {{ exercise['REPETICIONES'] }}</li>
+  <li>Peso: {{ exercise['PESO'] }}</li>
+  <li>Descanso sugerido: {{ exercise['DESCANSO'] }} min</li>
+  <li>Target: {{ exercise['target'] }}</li>
+</ul>
+<p>
+  <img src="{{ url_for('static', filename='img/' + (exercise['EJERCICIO']|slugify) + '.png') }}" alt="Imagen del ejercicio" width="300">
+</p>
+<h3>Ejecución</h3>
+<ul>
+  {% for tip in exercise['ejecucion'] %}
+  <li>{{ tip }}</li>
+  {% endfor %}
+</ul>
+<h3>Don'ts</h3>
+<ul>
+  {% for d in exercise['donts'] %}
+  <li>{{ d }}</li>
+  {% endfor %}
+</ul>
+<form method="post">
+  <button type="submit">Realizado</button>
+  <a href="{{ url_for('day_view', day=day) }}">Atrás</a>
+</form>
+{% endblock %}

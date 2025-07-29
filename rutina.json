@@ -1,0 +1,688 @@
+{
+    "1": [
+        {
+            "EJERCICIO": "Abdominal plancha isométrico en fitball",
+            "POSICIÓN": "Colchoneta",
+            "SERIES": 3,
+            "REPETICIONES": "30 [s]",
+            "PESO": "-",
+            "DESCANSO": 1.5,
+            "target": "Core (abdominales): recto abdominal y estabilizadores lumbares",
+            "ejecucion": [
+                "Coloca los antebrazos sobre el fitball y extiende las piernas en posición de plancha.",
+                "Mantén el cuerpo en línea recta desde la cabeza hasta los talones, activando el core y glúteos.",
+                "Respira de forma controlada y mantiene la posición por el tiempo indicado."
+            ],
+            "donts": [
+                "No eleves demasiado la cadera ni dejes caer la zona lumbar.",
+                "Evita abrir demasiado las piernas.",
+                "No encoger el cuello; mantén la mirada al suelo."
+            ]
+        },
+        {
+            "EJERCICIO": "Abdominal con rueda despacio",
+            "POSICIÓN": "Colchoneta",
+            "SERIES": 3,
+            "REPETICIONES": "6 a 12",
+            "PESO": "P/C",
+            "DESCANSO": 1.5,
+            "target": "Core (abdominales): recto abdominal y oblicuos",
+            "ejecucion": [
+                "Arrodíllate con la rueda frente a ti y sujeta las asas con ambas manos.",
+                "Desplázate lentamente hacia adelante rodando la rueda, extendiendo el torso sin perder la posición neutra de la espalda.",
+                "Retrocede con control usando solo la fuerza del core."
+            ],
+            "donts": [
+                "No dejes caer la zona lumbar; mantén la espalda neutra.",
+                "Evita desplegar demasiado la rueda comprometiendo la postura.",
+                "No realices el movimiento de forma explosiva; prioriza el control."
+            ]
+        },
+        {
+            "EJERCICIO": "Abdominal escalador brazos en exten",
+            "POSICIÓN": "Colchoneta",
+            "SERIES": 3,
+            "REPETICIONES": "8 por lado",
+            "PESO": "P/C",
+            "DESCANSO": 1.5,
+            "target": "Core (abdominales) y hombros: recto abdominal y deltoides",
+            "ejecucion": [
+                "Colócate en posición de plancha alta con manos extendidas bajo los hombros.",
+                "Lleva una rodilla hacia el pecho alternando ambos lados manteniendo el core firme.",
+                "Controla la elevación de cadera y hombros, manteniendo la espalda neutra."
+            ],
+            "donts": [
+                "No hundas la zona lumbar ni arquees la espalda.",
+                "Evita elevar demasiado las caderas.",
+                "No balancees el cuerpo lateralmente."
+            ]
+        },
+        {
+            "EJERCICIO": "Press de pecho máquina",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "15, 10, 8 y 8",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Pectoral mayor (pecho): cabezas clavicular y esternal",
+            "ejecucion": [
+                "Siéntate con la espalda apoyada y pies firmes en el suelo.",
+                "Agarra las empuñaduras a la altura del pecho con agarre pronado.",
+                "Empuja la carga hacia adelante hasta extensión parcial de los brazos, sin bloquear codos.",
+                "Regresa con control hasta sentir un ligero estiramiento en el pecho."
+            ],
+            "donts": [
+                "No arquees la espalda; mantén la zona lumbar alineada.",
+                "Evita dejar caer los hombros hacia adelante.",
+                "No bloquees completamente los codos al empujar."
+            ]
+        },
+        {
+            "EJERCICIO": "Press de pecho banco plano con barra olímpica (mancuerna)",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "8",
+            "PESO": "-",
+            "DESCANSO": 1.5,
+            "target": "Pectoral mayor (pecho): porción esternal",
+            "ejecucion": [
+                "Acuéstate con la espalda y glúteos apoyados en el banco plano.",
+                "Sujeta la barra/mancuernas con agarre pronado a la altura del pecho.",
+                "Empuja en línea vertical hasta extensión completa sin rebotar.",
+                "Baja controlado hasta que la barra casi toque el pecho."
+            ],
+            "donts": [
+                "No rebotar la barra contra el pecho.",
+                "Evita arquear excesivamente la zona lumbar.",
+                "No separar los pies del suelo."
+            ]
+        },
+        {
+            "EJERCICIO": "Press de pecho incl con mancuerna",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "8 a 10",
+            "PESO": "-",
+            "DESCANSO": 1.5,
+            "target": "Pectoral mayor (pecho): cabeza clavicular (porción superior)",
+            "ejecucion": [
+                "Reclina el banco a aproximadamente 30°.",
+                "Sujeta las mancuernas con agarre pronado y comienza cerca del pecho.",
+                "Empuja hacia arriba y ligeramente hacia atrás en línea con los hombros.",
+                "Controla el descenso hasta el inicio del movimiento."
+            ],
+            "donts": [
+                "No exceder el ángulo más de 30° para no activar demasiado el hombro.",
+                "Evita juntar demasiado las mancuernas.",
+                "No balancear el torso."
+            ]
+        },
+        {
+            "EJERCICIO": "Apertura máquina",
+            "POSICIÓN": "-",
+            "SERIES": 3,
+            "REPETICIONES": "8 a 10",
+            "PESO": "10",
+            "DESCANSO": 1.5,
+            "target": "Pectoral mayor y menor (pecho): fibras medias",
+            "ejecucion": [
+                "Siéntate con la espalda apoyada y hombros alineados con el eje de la máquina.",
+                "Agarra las manijas con codos ligeramente flexionados.",
+                "Abre los brazos hasta sentir un estiramiento suave en el pecho.",
+                "Regresa con control sin permitir que las manijas se junten con impacto."
+            ],
+            "donts": [
+                "No flexionar demasiado los codos.",
+                "Evita arquear la espalda.",
+                "No impulsarte con el cuerpo; el movimiento es solo de hombros."
+            ]
+        },
+        {
+            "EJERCICIO": "Flexión de codo normales o con piernas flex",
+            "POSICIÓN": "Colchoneta",
+            "SERIES": 3,
+            "REPETICIONES": "8 a 12",
+            "PESO": "P/C",
+            "DESCANSO": 1.5,
+            "target": "Pectoral mayor, tríceps y deltoides anterior",
+            "ejecucion": [
+                "Colócate en posición de plancha con manos al ancho de hombros.",
+                "Flexiona los codos descendiendo el cuerpo hasta que el pecho quede cerca del suelo.",
+                "Mantén el cuerpo alineado y empuja hasta volver a la posición inicial."
+            ],
+            "donts": [
+                "No hundir la zona lumbar ni elevar demasiado las caderas.",
+                "Evita abrir demasiado las manos.",
+                "No dejar caer la cabeza; mantén el cuello neutral."
+            ]
+        },
+        {
+            "EJERCICIO": "Bíceps con barra",
+            "POSICIÓN": "De pie",
+            "SERIES": 4,
+            "REPETICIONES": "8 a 10",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Bíceps braquial (parte anterior del brazo)",
+            "ejecucion": [
+                "De pie con la espalda recta, sujeta la barra con agarre supino.",
+                "Flexiona los codos manteniendo los brazos pegados al torso.",
+                "Contrae el bíceps en la parte superior y baja controlado."
+            ],
+            "donts": [
+                "No balancear el torso ni usar impulso.",
+                "Evita separar los codos del cuerpo.",
+                "No extender bruscamente los codos al bajar."
+            ]
+        },
+        {
+            "EJERCICIO": "Bco scott con barra",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "8 a 10",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Bíceps braquial (porción corta) en banco Scott",
+            "ejecucion": [
+                "Siéntate y apoya los brazos en el banco Scott.",
+                "Sujeta la barra con agarre supino a la altura del pecho.",
+                "Eleva la barra contrayendo el bíceps y baja controlado."
+            ],
+            "donts": [
+                "No despegar los brazos del cojín.",
+                "Evita balancear la espalda.",
+                "No desplazar los codos hacia adelante."
+            ]
+        },
+        {
+            "EJERCICIO": "Bíceps tipo martillo simultáneo con mancuerna",
+            "POSICIÓN": "Sentado",
+            "SERIES": 4,
+            "REPETICIONES": "10",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Braquial y braquiorradial (antebrazo), además del bíceps braquial",
+            "ejecucion": [
+                "De pie o sentado, sujeta манcuernas con agarre neutro.",
+                "Flexiona los codos manteniendo las muñecas neutrales.",
+                "Contrae al máximo en la parte superior y baja lentamente."
+            ],
+            "donts": [
+                "No rotar las muñecas.",
+                "Evita balancear el torso.",
+                "No dejar caer las mancuernas bruscamente."
+            ]
+        }
+    ],
+    "2": [
+        {
+            "EJERCICIO": "JALON DORSAL X DELANTE TOMADA EN PRONO CON BARRA",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "15, 10, 8 y 8",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Dorsal ancho (espalda alta y media)",
+            "ejecucion": [
+                "Siéntate y ajusta almohadillas de muslos.",
+                "Agarra la barra con agarre pronado ancho.",
+                "Tira la barra hacia el pecho manteniendo el torso erguido.",
+                "Baja con control hasta extensión completa de brazos."
+            ],
+            "donts": [
+                "No inclinar el torso excesivamente hacia atrás.",
+                "Evita llevar la barra detrás del cuello.",
+                "No usar impulso corporal."
+            ]
+        },
+        {
+            "EJERCICIO": "Remo incl con barra tomada en supino",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "10",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Espalda media (romboides, dorsal ancho) y bíceps braquial",
+            "ejecucion": [
+                "Inclina el torso hacia adelante manteniendo la espalda recta.",
+                "Agarra la barra con agarre supino.",
+                "Lleva la barra hacia el ombligo contrayendo la espalda.",
+                "Regresa controlado hasta extensión completa."
+            ],
+            "donts": [
+                "No arquear la espalda.",
+                "Evita usar momentum.",
+                "No dejar caer la barra."
+            ]
+        },
+        {
+            "EJERCICIO": "Remo en polea bajo con triangulo",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "10 a 15",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Espalda media (dorsal ancho y romboides)",
+            "ejecucion": [
+                "Siéntate con rodillas ajustadas y espalda erguida.",
+                "Agarra el triángulo con ambas manos.",
+                "Tira hacia el abdomen juntando omóplatos.",
+                "Regresa controlado hasta extensión completa."
+            ],
+            "donts": [
+                "No inclinar el torso.",
+                "Evita separar los pies del suelo.",
+                "No arquear la espalda baja."
+            ]
+        },
+        {
+            "EJERCICIO": "Pullover en polea con cuerda o barra",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "10 a 15",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Dorsal ancho y serrato anterior",
+            "ejecucion": [
+                "De pie, con rodillas ligeramente flexionadas y espalda recta.",
+                "Sujeta la cuerda/barra con agarre neutro.",
+                "Tira desde detrás de la cabeza hasta frente de los muslos.",
+                "Regresa lento manteniendo tensión."
+            ],
+            "donts": [
+                "No flexionar demasiado los codos.",
+                "Evita arquear la zona lumbar.",
+                "No usar peso excesivo."
+            ]
+        },
+        {
+            "EJERCICIO": "Tríceps polea con cuerda",
+            "POSICIÓN": "De pie",
+            "SERIES": 4,
+            "REPETICIONES": "12 a 15",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Tríceps braquial (cabezas lateral y medial)",
+            "ejecucion": [
+                "De pie frente a la polea, con codos pegados al torso.",
+                "Sujeta la cuerda y empuja los antebrazos hacia abajo hasta bloqueo.",
+                "Regresa controlado sin separar los codos."
+            ],
+            "donts": [
+                "No separar los codos.",
+                "Evita inclinar el torso.",
+                "No bloquear violentamente los codos."
+            ]
+        },
+        {
+            "EJERCICIO": "Tríceps copa con 1 mancuerna",
+            "POSICIÓN": "Sentado",
+            "SERIES": 4,
+            "REPETICIONES": "10 a 15",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Tríceps braquial (cabeza larga)",
+            "ejecucion": [
+                "Siéntate con espalda recta y sujeta la mancuerna con ambas manos.",
+                "Lleva la mancuerna por detrás de la cabeza flexionando los codos.",
+                "Extiende los brazos hacia arriba sin mover los codos."
+            ],
+            "donts": [
+                "No mover los codos.",
+                "Evita arquear la espalda.",
+                "No usar cargas demasiado pesadas."
+            ]
+        },
+        {
+            "EJERCICIO": "Press francés con barra o mancuerna simultáneo",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "10 a 15",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Tríceps braquial (cabeza larga)",
+            "ejecucion": [
+                "Acuéstate en banco plano con pies firmes.",
+                "Sujeta la barra/mancuerna con agarre supino.",
+                "Flexiona los codos llevando la carga hacia la frente.",
+                "Extiende hasta posición inicial sin bloquear codos."
+            ],
+            "donts": [
+                "No separar los codos.",
+                "Evita flexionar las muñecas.",
+                "No usar impulso del tronco."
+            ]
+        }
+    ],
+    "3": [
+        {
+            "EJERCICIO": "Pantorrilla de pie unilateral con 1 mancuerna",
+            "POSICIÓN": "STEP",
+            "SERIES": 3,
+            "REPETICIONES": "15 x lado",
+            "PESO": "5 a 10 [kg]",
+            "DESCANSO": 1.0,
+            "target": "Gemelos (gastrocnemio y sóleo)",
+            "ejecucion": [
+                "Apoya la punta del pie en un step sosteniendo la mancuerna.",
+                "Eleva los talones lo más alto posible contrayendo el gemelo.",
+                "Mantén la contracción un segundo y baja controlado."
+            ],
+            "donts": [
+                "No flexionar la rodilla.",
+                "Evita soltar la mancuerna.",
+                "No balancear el cuerpo."
+            ]
+        },
+        {
+            "EJERCICIO": "Pantorrilla gemelo sentado en máquina",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "15",
+            "PESO": "10 a 20 [kg] x lado",
+            "DESCANSO": 1.0,
+            "target": "Sóleo (parte baja de la pantorrilla)",
+            "ejecucion": [
+                "Siéntate y ajusta almohadilla sobre las rodillas.",
+                "Empuja con las puntas de los pies hacia abajo.",
+                "Mantén la contracción y baja lentamente."
+            ],
+            "donts": [
+                "No elevar los talones bruscamente.",
+                "Evita despegar los pies de la plataforma.",
+                "No arquear la espalda."
+            ]
+        },
+        {
+            "EJERCICIO": "Camilla de isquiotibial",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "8 a 10",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Isquiotibiales (parte posterior de muslo)",
+            "ejecucion": [
+                "Ajusta la máquina a tu altura y posición.",
+                "Acuéstate boca abajo con tobillos bajo almohadilla.",
+                "Flexiona las rodillas llevando talones a glúteos.",
+                "Baja controlado sin extender completamente."
+            ],
+            "donts": [
+                "No levantar la pelvis.",
+                "Evita un rango de movimiento corto.",
+                "No usar impulso del tronco."
+            ]
+        },
+        {
+            "EJERCICIO": "Peso muerto con barra",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "8 a 10",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Espalda baja, isquiotibiales y glúteos",
+            "ejecucion": [
+                "Pies al ancho de caderas, barra al frente.",
+                "Flexiona rodillas y caderas con espalda recta.",
+                "Extiende caderas y rodillas hasta posición erguida.",
+                "Baja la barra deslizando por piernas controlado."
+            ],
+            "donts": [
+                "No encorvar la espalda.",
+                "Evita bloquear bruscamente las rodillas.",
+                "No usar peso excesivo sin técnica."
+            ]
+        },
+        {
+            "EJERCICIO": "Sentadilla en máquina Mf o libre",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "15, 10, 8 y 8",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Cuádriceps, glúteos e isquiotibiales",
+            "ejecucion": [
+                "Coloca espalda y hombros en el soporte.",
+                "Pies al ancho de hombros, puntas ligeramente afuera.",
+                "Desciende hasta paralelo manteniendo el core activo.",
+                "Empuja con talones para volver arriba."
+            ],
+            "donts": [
+                "No dejar que las rodillas colapsen hacia adentro.",
+                "Evita elevar los talones del suelo.",
+                "No arquear la espalda baja."
+            ]
+        },
+        {
+            "EJERCICIO": "Prensa de piernas a 45°",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "15, 10, 8 y 8",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Cuádriceps, glúteos e isquiotibiales",
+            "ejecucion": [
+                "Siéntate con espalda apoyada y pies en la plataforma.",
+                "Empuja sin bloquear rodillas y baja hasta 90°.",
+                "Mantén el core firme durante todo el movimiento."
+            ],
+            "donts": [
+                "No bloquear rodillas al finalizar.",
+                "Evita levantar glúteos del respaldo.",
+                "No colocar pies demasiado altos."
+            ]
+        },
+        {
+            "EJERCICIO": "JAKA",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "15",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Aductores (músculos internos del muslo)",
+            "ejecucion": [
+                "Siéntate y ajusta almohadillas externas del equipo.",
+                "Presiona las piernas hacia adentro juntando las almohadillas.",
+                "Mantén contracción breve y regresa controlado."
+            ],
+            "donts": [
+                "No rebotes al final del movimiento.",
+                "Evita inclinar el tronco.",
+                "No usar impulso del torso."
+            ]
+        }
+    ],
+    "4": [
+        {
+            "EJERCICIO": "Abdominal plancha isométrico en fitball",
+            "POSICIÓN": "Colchoneta",
+            "SERIES": 3,
+            "REPETICIONES": "30 [s]",
+            "PESO": "-",
+            "DESCANSO": 1.5,
+            "target": "Core (abdominales): recto abdominal y estabilizadores lumbares",
+            "ejecucion": [
+                "Coloca los antebrazos sobre el fitball y extiende las piernas en posición de plancha.",
+                "Mantén el cuerpo en línea recta desde la cabeza hasta los talones, activando el core y glúteos.",
+                "Respira de forma controlada y mantiene la posición por el tiempo indicado."
+            ],
+            "donts": [
+                "No eleves demasiado la cadera ni dejes caer la zona lumbar.",
+                "Evita abrir demasiado las piernas.",
+                "No encoger el cuello; mantén la mirada al suelo."
+            ]
+        },
+        {
+            "EJERCICIO": "Abdominal con rueda despacio",
+            "POSICIÓN": "Colchoneta",
+            "SERIES": 3,
+            "REPETICIONES": "6 a 12",
+            "PESO": "P/C",
+            "DESCANSO": 1.5,
+            "target": "Core (abdominales): recto abdominal y oblicuos",
+            "ejecucion": [
+                "Arrodíllate con la rueda frente a ti y sujeta las asas con ambas manos.",
+                "Desplázate lentamente hacia adelante rodando la rueda, extendiendo el torso sin perder la posición neutra de la espalda.",
+                "Retrocede con control usando solo la fuerza del core."
+            ],
+            "donts": [
+                "No dejes caer la zona lumbar; mantén la espalda neutra.",
+                "Evita desplegar demasiado la rueda comprometiendo la postura.",
+                "No realices el movimiento de forma explosiva; prioriza el control."
+            ]
+        },
+        {
+            "EJERCICIO": "Abdominal escalador brazos en exten",
+            "POSICIÓN": "Colchoneta",
+            "SERIES": 3,
+            "REPETICIONES": "8 por lado",
+            "PESO": "P/C",
+            "DESCANSO": 1.5,
+            "target": "Core (abdominales) y hombros: recto abdominal y deltoides",
+            "ejecucion": [
+                "Colócate en posición de plancha alta con manos extendidas bajo los hombros.",
+                "Lleva una rodilla hacia el pecho alternando ambos lados manteniendo el core firme.",
+                "Controla la elevación de cadera y hombros, manteniendo la espalda neutra."
+            ],
+            "donts": [
+                "No hundas la zona lumbar ni arquees la espalda.",
+                "Evita elevar demasiado las caderas.",
+                "No balancees el cuerpo lateralmente."
+            ]
+        },
+        {
+            "EJERCICIO": "Press de hombro con mancuerna",
+            "POSICIÓN": "Sentado",
+            "SERIES": 4,
+            "REPETICIONES": "8 a 10",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Deltoides (porciones media y anterior)",
+            "ejecucion": [
+                "Siéntate con espalda recta en banco.",
+                "Sujeta mancuernas a la altura de los hombros con agarre neutro.",
+                "Empuja hacia arriba extendiendo brazos sin bloquear codos.",
+                "Baja con control hasta posición inicial."
+            ],
+            "donts": [
+                "No arquear la espalda baja.",
+                "Evita flexionar las muñecas.",
+                "No elevar las mancuernas por detrás de la cabeza."
+            ]
+        },
+        {
+            "EJERCICIO": "Press militar con barra",
+            "POSICIÓN": "-",
+            "SERIES": 4,
+            "REPETICIONES": "8",
+            "PESO": "-",
+            "DESCANSO": 1.5,
+            "target": "Deltoides (porciones anterior y media)",
+            "ejecucion": [
+                "Coloca barra a nivel de hombros con agarre pronado.",
+                "Empuja verticalmente hasta extender brazos sin bloquear codos.",
+                "Baja controlado hasta clavículas."
+            ],
+            "donts": [
+                "No bloquear codos de forma brusca.",
+                "Evita arquear la espalda.",
+                "No empujar la barra en diagonal."
+            ]
+        },
+        {
+            "EJERCICIO": "Elev frontal en polea con cuerda",
+            "POSICIÓN": "De pie",
+            "SERIES": 4,
+            "REPETICIONES": "12 a 15",
+            "PESO": "-",
+            "DESCANSO": 1.5,
+            "target": "Deltoides anterior",
+            "ejecucion": [
+                "Coloca polea baja y sujeta la cuerda con agarre neutro.",
+                "Tira hacia adelante hasta altura de hombros manteniendo torso erguido.",
+                "Regresa lento controlando la tensión."
+            ],
+            "donts": [
+                "No flexionar demasiado codos.",
+                "Evita inclinar el torso.",
+                "No usar impulso de piernas."
+            ]
+        },
+        {
+            "EJERCICIO": "Elev lateral con mancuerna",
+            "POSICIÓN": "De pie",
+            "SERIES": 4,
+            "REPETICIONES": "8",
+            "PESO": "-",
+            "DESCANSO": 1.5,
+            "target": "Deltoides medio",
+            "ejecucion": [
+                "De pie con mancuernas a los lados.",
+                "Eleva brazos lateralmente hasta altura de hombros con codos ligeramente flexionados.",
+                "Baja controlado."
+            ],
+            "donts": [
+                "No elevar por encima de los hombros.",
+                "Evita encoger los hombros.",
+                "No usar impulso del torso."
+            ]
+        },
+        {
+            "EJERCICIO": "Remo al mentón con barra",
+            "POSICIÓN": "De pie",
+            "SERIES": 4,
+            "REPETICIONES": "8 a 10",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Trapecio superior y deltoides medio",
+            "ejecucion": [
+                "De pie con agarre pronado estrecho.",
+                "Eleva la barra hacia el mentón acercando codos al techo.",
+                "Baja controlado sin bloquear muñecas."
+            ],
+            "donts": [
+                "No tirar con antebrazos.",
+                "Evita elevar hombros.",
+                "No bloquear muñecas."
+            ]
+        },
+        {
+            "EJERCICIO": "Press de hombro (trapecio) con mancuerna o disco",
+            "POSICIÓN": "De pie",
+            "SERIES": 4,
+            "REPETICIONES": "12 a 15",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Trapecio superior y deltoides anterior",
+            "ejecucion": [
+                "De pie, sostén mancuerna/disco frente al tronco.",
+                "Empuja en diagonal hacia adelante y arriba.",
+                "Controla bajada manteniendo torso estable."
+            ],
+            "donts": [
+                "No arquear la espalda.",
+                "Evita movimientos diagonales excesivos.",
+                "No separar manos desiguales."
+            ]
+        },
+        {
+            "EJERCICIO": "FACE PULL CON CUERDA DESPACIO",
+            "POSICIÓN": "De pie",
+            "SERIES": 4,
+            "REPETICIONES": "8 a 10",
+            "PESO": "-",
+            "DESCANSO": 1.0,
+            "target": "Trapecio medio/bajo y deltoides posteriores",
+            "ejecucion": [
+                "Coloca polea a la altura de la cara y sujeta la cuerda.",
+                "Tira hacia la cara separando manos y manteniendo codos altos.",
+                "Regresa lentamente controlando la resistencia."
+            ],
+            "donts": [
+                "No encoger los hombros.",
+                "Evita dejar caer espalda.",
+                "No usar impulso; movimiento debe ser lento."
+            ]
+        }
+    ]
+}
