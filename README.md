@@ -5,12 +5,12 @@ Aplicación web sencilla para visualizar y marcar como realizados los ejercicios
 ## Requisitos
 
 - Python 3
-- Flask
+- Flask (ver `requirements.txt`)
 
 Instala las dependencias con:
 
 ```bash
-pip install Flask
+pip install -r requirements.txt
 ```
 
 ## Uso
