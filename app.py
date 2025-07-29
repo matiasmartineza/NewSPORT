@@ -3,6 +3,7 @@ import os
 import re
 import unicodedata
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
+from filelock import FileLock
 
 app = Flask(__name__)
 app.secret_key = 'change-me'
@@ -22,6 +23,7 @@ def slugify(value: str) -> str:
 app.jinja_env.filters['slugify'] = slugify
 
 STATE_FILE = 'state.txt'
+STATE_LOCK = FileLock(STATE_FILE + '.lock')
 ROUTINE_FILE = 'rutina.json'
 
 # Load routine data
@@ -33,18 +35,20 @@ for d in ["1", "2", "3", "4"]:
     ROUTINES.setdefault(d, [])
 
 def load_state():
-    if os.path.exists(STATE_FILE):
-        try:
-            with open(STATE_FILE, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except Exception:
-            pass
-    # default empty state
-    return {}
+    with STATE_LOCK:
+        if os.path.exists(STATE_FILE):
+            try:
+                with open(STATE_FILE, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except Exception:
+                pass
+        # default empty state
+        return {}
 
 def save_state():
-    with open(STATE_FILE, 'w', encoding='utf-8') as f:
-        json.dump(STATE, f)
+    with STATE_LOCK:
+        with open(STATE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(STATE, f)
 
 def get_user_state(username):
     user = STATE.setdefault(username, {d: {} for d in ["1", "2", "3", "4"]})
