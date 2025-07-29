@@ -26,6 +26,6 @@
 </ul>
 <form method="post">
   <button type="submit">Realizado</button>
-  <a href="{{ url_for('day_view', day=day) }}">Atrás</a>
+  <button type="button" onclick="window.location.href='{{ url_for('day_view', day=day) }}'">Regresar</button>
 </form>
 {% endblock %}
