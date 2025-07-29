@@ -27,6 +27,7 @@
   </style>
 </head>
 <body>
+{% if show_timer %}
 <div class="timer">
   <button id="start-btn">Iniciar Rutina</button>
   <button id="finish-btn" style="display:none;">Finalizar Rutina</button>
@@ -37,6 +38,7 @@
     <div>Restante: <span id="rest"></span></div>
   </div>
 </div>
+{% endif %}
 {% block content %}{% endblock %}
 <script>
   // Expose the current username to client-side scripts

@@ -84,7 +84,8 @@ def day_view(day):
     user_state = get_user_state(username)
     exercises = ROUTINES.get(day, [])
     done = user_state.get(day, {})
-    return render_template('day.html', day=day, exercises=exercises, done=done)
+    return render_template('day.html', day=day, exercises=exercises, done=done,
+                           show_timer=True)
 
 @app.route('/logout')
 def logout():
@@ -138,7 +139,8 @@ def exercise_view(day, idx):
         save_state()
         return redirect(url_for('day_view', day=day))
     done = user_state.get(day, {}).get(str(idx), False)
-    return render_template('exercise.html', day=day, idx=idx, exercise=exercise, done=done)
+    return render_template('exercise.html', day=day, idx=idx, exercise=exercise,
+                           done=done, show_timer=True)
 
 @app.route('/summary/<day>', methods=['GET', 'POST'])
 def summary(day):
