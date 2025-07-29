@@ -10,7 +10,7 @@
   <li>Target: {{ exercise['target'] }}</li>
 </ul>
 <p>
-  <img src="{{ url_for('static', filename='img/' + (exercise['EJERCICIO']|slugify) + '.png') }}" alt="Imagen del ejercicio" width="300">
+  <img src="{{ url_for('static', filename='img/' + day + '/' + (exercise['EJERCICIO']|slugify) + '.png') }}" alt="Imagen del ejercicio" width="300">
 </p>
 <h3>Ejecución</h3>
 <ul>
