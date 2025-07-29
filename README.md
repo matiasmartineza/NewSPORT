@@ -25,4 +25,10 @@ Luego abre `http://localhost:5000` en tu navegador. Podrás seleccionar un día 
 
 La página muestra un contador con el tiempo total transcurrido y botones para iniciar un cronómetro de descanso de 1 minuto o 1 minuto y 30 segundos.
 
-Al comenzar la rutina puedes pulsar **Finalizar Rutina** para detener el contador. Se mostrará el porcentaje de ejercicios completados y el tiempo total invertido y se reiniciará el estado del día.
+Al finalizar la rutina pulsa **Finalizar Rutina**. Ahora serás redirigido a una
+página de resumen que indica el tiempo invertido, el porcentaje completado y los
+grupos musculares trabajados. También se muestra un pequeño gráfico generado con
+Chart.js.
+
+No es necesario instalar nada adicional para el gráfico ya que Chart.js se
+carga desde una CDN.

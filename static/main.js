@@ -44,24 +44,17 @@ function stopTotal() {
 function finishRoutine() {
   if (totalStart === null) return;
   const diff = Date.now() - totalStart;
-  const sec = Math.floor(diff / 1000);
-  const m = Math.floor(sec / 60);
-  const s = sec % 60;
-  const total = document.querySelectorAll('input[type="checkbox"]').length;
-  const done = document.querySelectorAll('input[type="checkbox"]:checked').length;
-  const percent = total ? Math.round(done / total * 100) : 0;
-  alert(`Completaste ${percent}% en ${m}:${s.toString().padStart(2,'0')}`);
+  const timeSec = Math.floor(diff / 1000);
+  const checked = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'));
+  const indices = checked.map(cb => cb.dataset.idx);
   stopTotal();
-  const finish = document.getElementById('finish-btn');
-  if (finish) finish.style.display = 'none';
-  const startBtn = document.getElementById('start-btn');
-  if (startBtn) startBtn.style.display = '';
-  document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-    cb.disabled = true;
-    cb.checked = false;
-  });
   if (window.currentDay) {
-    fetch(`/reset/${window.currentDay}`, {method: 'POST'});
+    fetch(`/reset/${window.currentDay}`, {method: 'POST'}).finally(() => {
+      const params = new URLSearchParams();
+      params.set('time', timeSec.toString());
+      if (indices.length) params.set('done', indices.join(','));
+      window.location.href = `/summary/${window.currentDay}?` + params.toString();
+    });
   }
 }
 

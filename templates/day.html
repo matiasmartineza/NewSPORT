@@ -9,7 +9,7 @@
   <tbody>
   {% for e in exercises %}
   <tr>
-    <td><input type="checkbox" data-idx="{{ loop.index0 }}" {% if done.get(loop.index0|string) %}checked{% endif %}></td>
+    <td><input type="checkbox" data-idx="{{ loop.index0 }}" data-target="{{ e['target'] }}" {% if done.get(loop.index0|string) %}checked{% endif %}></td>
     <td><a href="{{ url_for('exercise_view', day=day, idx=loop.index0) }}">{{ e['EJERCICIO'] }}</a></td>
     <td>{{ e['REPETICIONES'] }}</td>
     <td>{{ e['SERIES'] }}</td>
