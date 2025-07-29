@@ -82,5 +82,38 @@ def exercise_view(day, idx):
     done = STATE.get(day, {}).get(str(idx), False)
     return render_template('exercise.html', day=day, idx=idx, exercise=exercise, done=done)
 
+@app.route('/summary/<day>', methods=['GET', 'POST'])
+def summary(day):
+    """Show summary of completed exercises for the given day."""
+    exercises = ROUTINES.get(day, [])
+    done_param = request.values.get('done', '')
+    time_param = request.values.get('time', '0')
+    try:
+        total_time = int(time_param)
+    except ValueError:
+        total_time = 0
+
+    done_idxs = []
+    for part in done_param.split(','):
+        if part.isdigit():
+            done_idxs.append(int(part))
+
+    percent = round(len(done_idxs) / len(exercises) * 100) if exercises else 0
+
+    muscles = []
+    counts = {}
+    for i in done_idxs:
+        if 0 <= i < len(exercises):
+            target = exercises[i].get('target', 'Desconocido')
+            muscles.append(target)
+            counts[target] = counts.get(target, 0) + 1
+
+    m = total_time // 60
+    s = total_time % 60
+    time_str = f"{m}:{s:02}"
+
+    return render_template('summary.html', day=day, time=time_str,
+                           percent=percent, muscles=muscles, counts=counts)
+
 if __name__ == '__main__':
     app.run(debug=True)
