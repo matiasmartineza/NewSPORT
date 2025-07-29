@@ -36,6 +36,7 @@ function startTotal() {
   if (btn) btn.style.display = 'none';
   const finish = document.getElementById('finish-btn');
   if (finish) finish.style.display = '';
+  document.querySelectorAll('.back-btn').forEach(b => b.style.display = 'none');
 }
 
 function stopTotal() {
@@ -44,6 +45,7 @@ function stopTotal() {
   window.totalStart = null;
   saveTotal();
   document.getElementById('total').textContent = '0:00';
+  document.querySelectorAll('.back-btn').forEach(b => b.style.display = '');
 }
 
 function finishRoutine() {
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     totalTimer = setInterval(updateTotal, 1000);
     if (btn) btn.style.display = 'none';
     if (finishBtn) finishBtn.style.display = '';
+    document.querySelectorAll('.back-btn').forEach(b => b.style.display = 'none');
   } else if (btn) {
     btn.addEventListener('click', startTotal);
   }
