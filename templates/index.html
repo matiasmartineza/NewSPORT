@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Selecciona un día</h1>
+<h1>Bienvenido, {{ username }}</h1>
+<p>Selecciona un día</p>
 <ul>
   {% for d in days %}
     <li><a href="{{ url_for('day_view', day=d) }}">Día {{ d }}</a></li>
