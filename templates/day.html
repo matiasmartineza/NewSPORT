@@ -25,6 +25,8 @@
 {% endif %}
 <script>
   const dayId = '{{ day }}';
+  window.currentDay = dayId;
+  window.totalExercises = {{ exercises|length }};
   document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
     cb.addEventListener('change', () => {
       fetch(`/toggle/${dayId}/${cb.dataset.idx}`, {method: 'POST'});

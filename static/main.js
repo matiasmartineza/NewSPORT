@@ -29,6 +29,40 @@ function startTotal() {
   totalTimer = setInterval(updateTotal, 1000);
   const btn = document.getElementById('start-btn');
   if (btn) btn.style.display = 'none';
+  const finish = document.getElementById('finish-btn');
+  if (finish) finish.style.display = '';
+}
+
+function stopTotal() {
+  if (totalStart === null) return;
+  clearInterval(totalTimer);
+  totalStart = null;
+  saveTotal();
+  document.getElementById('total').textContent = '0:00';
+}
+
+function finishRoutine() {
+  if (totalStart === null) return;
+  const diff = Date.now() - totalStart;
+  const sec = Math.floor(diff / 1000);
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  const total = document.querySelectorAll('input[type="checkbox"]').length;
+  const done = document.querySelectorAll('input[type="checkbox"]:checked').length;
+  const percent = total ? Math.round(done / total * 100) : 0;
+  alert(`Completaste ${percent}% en ${m}:${s.toString().padStart(2,'0')}`);
+  stopTotal();
+  const finish = document.getElementById('finish-btn');
+  if (finish) finish.style.display = 'none';
+  const startBtn = document.getElementById('start-btn');
+  if (startBtn) startBtn.style.display = '';
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+    cb.disabled = true;
+    cb.checked = false;
+  });
+  if (window.currentDay) {
+    fetch(`/reset/${window.currentDay}`, {method: 'POST'});
+  }
 }
 
 function updateTotal() {
@@ -42,15 +76,18 @@ function updateTotal() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('start-btn');
+  const finishBtn = document.getElementById('finish-btn');
   const savedTotal = localStorage.getItem('totalStart');
   if (savedTotal) {
     totalStart = parseInt(savedTotal, 10);
     updateTotal();
     totalTimer = setInterval(updateTotal, 1000);
     if (btn) btn.style.display = 'none';
+    if (finishBtn) finishBtn.style.display = '';
   } else if (btn) {
     btn.addEventListener('click', startTotal);
   }
+  if (finishBtn) finishBtn.addEventListener('click', finishRoutine);
 
   const rs = localStorage.getItem('restStart');
   const rd = localStorage.getItem('restDuration');

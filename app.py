@@ -60,6 +60,14 @@ def toggle(day, idx):
     save_state(STATE)
     return ('', 204)
 
+# New endpoint to reset all checkboxes for a day
+@app.route('/reset/<day>', methods=['POST'])
+def reset_day(day):
+    """Clear the saved state for the given day."""
+    STATE[day] = {}
+    save_state(STATE)
+    return ('', 204)
+
 @app.route('/exercise/<day>/<int:idx>', methods=['GET', 'POST'])
 def exercise_view(day, idx):
     exercises = ROUTINES.get(day, [])
