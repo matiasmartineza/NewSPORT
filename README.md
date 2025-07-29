@@ -32,3 +32,11 @@ para una lectura clara y está generado con Chart.js.
 
 No es necesario instalar nada adicional para el gráfico ya que Chart.js se
 carga desde una CDN.
+
+## Concurrencia
+
+Las lecturas y escrituras sobre `state.txt` usan un bloqueo de archivo
+(`filelock`) para evitar corrupciones cuando hay múltiples peticiones.
+Si despliegas la aplicación en varias instancias debes asegurarte de que
+comparten el mismo sistema de archivos y el archivo de bloqueo; de lo
+contrario cada copia podría sobrescribir los datos de otra.
