@@ -1,19 +1,20 @@
-let totalStart = null;
+// Attach timers to the window so other inline scripts can access them
+window.totalStart = null;
 let totalTimer;
-let restStart = null;
+window.restStart = null;
 let restDuration = 0;
 
 function saveTotal() {
-  if (totalStart !== null) {
-    localStorage.setItem('totalStart', totalStart.toString());
+  if (window.totalStart !== null) {
+    localStorage.setItem('totalStart', window.totalStart.toString());
   } else {
     localStorage.removeItem('totalStart');
   }
 }
 
 function saveRest() {
-  if (restStart !== null && restDuration > 0) {
-    localStorage.setItem('restStart', restStart.toString());
+  if (window.restStart !== null && restDuration > 0) {
+    localStorage.setItem('restStart', window.restStart.toString());
     localStorage.setItem('restDuration', restDuration.toString());
   } else {
     localStorage.removeItem('restStart');
@@ -22,8 +23,8 @@ function saveRest() {
 }
 
 function startTotal() {
-  if (totalStart !== null) return;
-  totalStart = Date.now();
+  if (window.totalStart !== null) return;
+  window.totalStart = Date.now();
   saveTotal();
   updateTotal();
   totalTimer = setInterval(updateTotal, 1000);
@@ -34,16 +35,16 @@ function startTotal() {
 }
 
 function stopTotal() {
-  if (totalStart === null) return;
+  if (window.totalStart === null) return;
   clearInterval(totalTimer);
-  totalStart = null;
+  window.totalStart = null;
   saveTotal();
   document.getElementById('total').textContent = '0:00';
 }
 
 function finishRoutine() {
-  if (totalStart === null) return;
-  const diff = Date.now() - totalStart;
+  if (window.totalStart === null) return;
+  const diff = Date.now() - window.totalStart;
   const timeSec = Math.floor(diff / 1000);
   const checked = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'));
   const indices = checked.map(cb => cb.dataset.idx);
@@ -59,8 +60,8 @@ function finishRoutine() {
 }
 
 function updateTotal() {
-  if (totalStart === null) return;
-  let diff = Date.now() - totalStart;
+  if (window.totalStart === null) return;
+  let diff = Date.now() - window.totalStart;
   let sec = Math.floor(diff / 1000);
   let m = Math.floor(sec / 60);
   let s = sec % 60;
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const finishBtn = document.getElementById('finish-btn');
   const savedTotal = localStorage.getItem('totalStart');
   if (savedTotal) {
-    totalStart = parseInt(savedTotal, 10);
+    window.totalStart = parseInt(savedTotal, 10);
     updateTotal();
     totalTimer = setInterval(updateTotal, 1000);
     if (btn) btn.style.display = 'none';
@@ -85,14 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const rs = localStorage.getItem('restStart');
   const rd = localStorage.getItem('restDuration');
   if (rs && rd) {
-    restStart = parseInt(rs, 10);
+    window.restStart = parseInt(rs, 10);
     restDuration = parseInt(rd, 10);
-    let remain = restDuration - Math.floor((Date.now() - restStart)/1000);
+    let remain = restDuration - Math.floor((Date.now() - window.restStart)/1000);
     if (remain > 0) {
       document.getElementById('rest').textContent = formatTime(remain);
       restInterval = setInterval(updateRest, 1000);
     } else {
-      restStart = null;
+      window.restStart = null;
       restDuration = 0;
       saveRest();
       document.getElementById('rest').textContent = '';
@@ -103,20 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
 let restInterval;
 function startRest(seconds) {
   clearInterval(restInterval);
-  restStart = Date.now();
+  window.restStart = Date.now();
   restDuration = seconds;
   saveRest();
   updateRest();
   restInterval = setInterval(updateRest, 1000);
 }
 function updateRest() {
-  if (restStart === null) return;
-  const elapsed = Math.floor((Date.now() - restStart) / 1000);
+  if (window.restStart === null) return;
+  const elapsed = Math.floor((Date.now() - window.restStart) / 1000);
   const remain = restDuration - elapsed;
   document.getElementById('rest').textContent = formatTime(Math.max(remain, 0));
   if (remain <= 0) {
     clearInterval(restInterval);
-    restStart = null;
+    window.restStart = null;
     restDuration = 0;
     saveRest();
   }
