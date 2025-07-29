@@ -25,7 +25,7 @@ new Chart(ctx, {
 {% endif %}
 <p>¿Deseas continuar con el mismo nombre?</p>
 <p>
-  <a href="{{ url_for('index') }}">Continuar</a> |
-  <a href="{{ url_for('logout') }}">Salir</a>
+  <button class="btn" onclick="window.location.href='{{ url_for('index') }}'">Continuar</button>
+  <button class="btn" onclick="window.location.href='{{ url_for('logout') }}'">Salir</button>
 </p>
 {% endblock %}

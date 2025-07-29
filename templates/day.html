@@ -10,7 +10,7 @@
   {% for e in exercises %}
   <tr>
     <td><input type="checkbox" data-idx="{{ loop.index0 }}" data-target="{{ e['target'] }}" {% if done.get(loop.index0|string) %}checked{% endif %}></td>
-    <td><a href="{{ url_for('exercise_view', day=day, idx=loop.index0) }}">{{ e['EJERCICIO'] }}</a></td>
+    <td><button class="btn" onclick="window.location.href='{{ url_for('exercise_view', day=day, idx=loop.index0) }}'">{{ e['EJERCICIO'] }}</button></td>
     <td>{{ e['REPETICIONES'] }}</td>
     <td>{{ e['SERIES'] }}</td>
   </tr>
@@ -18,7 +18,7 @@
   </tbody>
 </table>
 <p>
-  <button class="back-btn" onclick="window.location.href='{{ url_for('index') }}'">Regresar</button>
+  <button class="btn back-btn" onclick="window.location.href='{{ url_for('index') }}'">Regresar</button>
 </p>
 {% else %}
 <p>No hay datos para este día.</p>

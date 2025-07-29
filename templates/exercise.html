@@ -24,8 +24,16 @@
   <li>{{ d }}</li>
   {% endfor %}
 </ul>
-<form method="post">
-  <button type="submit">Realizado</button>
-  <button type="button" class="back-btn" onclick="window.location.href='{{ url_for('day_view', day=day) }}'">Regresar</button>
+<form method="post" id="done-form">
+  <button class="btn" type="submit">Realizado</button>
+  <button class="btn back-btn" type="button" onclick="window.location.href='{{ url_for('day_view', day=day) }}'">Regresar</button>
 </form>
+<script>
+  document.getElementById('done-form').addEventListener('submit', function(ev) {
+    if (window.totalStart === null) {
+      alert('Inicia la rutina antes de marcar el ejercicio como realizado.');
+      ev.preventDefault();
+    }
+  });
+</script>
 {% endblock %}
