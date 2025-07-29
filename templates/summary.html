@@ -2,6 +2,7 @@
 {% block content %}
 <h1>¡Felicidades, {{ username }}!</h1>
 <p>Completaste {{ percent }}% de la rutina en {{ time }}.</p>
+<p>Tu progreso se ha reiniciado.</p>
 {% if muscles %}
 <canvas id="muscleChart" width="300" height="300"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -22,5 +23,9 @@ new Chart(ctx, {
 {% else %}
 <p>No marcaste ejercicios como realizados.</p>
 {% endif %}
-<p><a href="{{ url_for('index') }}">Volver al inicio</a></p>
+<p>¿Deseas continuar con el mismo nombre?</p>
+<p>
+  <a href="{{ url_for('index') }}">Continuar</a> |
+  <a href="{{ url_for('logout') }}">Salir</a>
+</p>
 {% endblock %}

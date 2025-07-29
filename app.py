@@ -45,6 +45,11 @@ def get_user_state(username):
     user = STATE.setdefault(username, {d: {} for d in ["1", "2", "3", "4"]})
     return user
 
+def clear_user_state(username):
+    """Reset all stored progress for the given user."""
+    STATE[username] = {d: {} for d in ["1", "2", "3", "4"]}
+    save_state()
+
 STATE = load_state()
 
 @app.route('/', methods=['GET', 'POST'])
@@ -71,6 +76,12 @@ def day_view(day):
     exercises = ROUTINES.get(day, [])
     done = user_state.get(day, {})
     return render_template('day.html', day=day, exercises=exercises, done=done)
+
+@app.route('/logout')
+def logout():
+    """Clear user session and redirect to login."""
+    session.pop('username', None)
+    return redirect(url_for('index'))
 
 @app.route('/toggle/<day>/<int:idx>', methods=['POST'])
 def toggle(day, idx):
@@ -119,6 +130,8 @@ def summary(day):
     username = session.get('username')
     if not username:
         return redirect(url_for('index'))
+    # Reset user progress after finishing the routine
+    clear_user_state(username)
     exercises = ROUTINES.get(day, [])
     done_param = request.values.get('done', '')
     time_param = request.values.get('time', '0')
