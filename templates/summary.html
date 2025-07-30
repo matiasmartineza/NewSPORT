@@ -8,6 +8,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 const counts = {{ counts|tojson }};
+const musclesByGroup = {{ muscles_by_group|tojson }};
 const ctx = document.getElementById('muscleChart').getContext('2d');
 new Chart(ctx, {
   type: 'pie',
@@ -16,7 +17,18 @@ new Chart(ctx, {
     datasets: [{ data: Object.values(counts) }]
   },
   options: {
-    plugins: { legend: { display: true } }
+    plugins: {
+      legend: { display: true },
+      tooltip: {
+        callbacks: {
+          label: function(ctx) {
+            const group = ctx.label || '';
+            const muscles = musclesByGroup[group] || [];
+            return group + ': ' + muscles.join(', ');
+          }
+        }
+      }
+    }
   }
 });
 </script>
