@@ -1,0 +1,201 @@
+{
+  "muscleGroups": [
+    {
+      "id": "pecho",
+      "name": "Pecho"
+    },
+    {
+      "id": "espalda",
+      "name": "Espalda"
+    },
+    {
+      "id": "hombros",
+      "name": "Hombros"
+    },
+    {
+      "id": "trapecio",
+      "name": "Trapecio"
+    },
+    {
+      "id": "biceps",
+      "name": "Bíceps"
+    },
+    {
+      "id": "triceps",
+      "name": "Tríceps"
+    },
+    {
+      "id": "antebrazo",
+      "name": "Antebrazo"
+    },
+    {
+      "id": "core",
+      "name": "Core"
+    },
+    {
+      "id": "pierna",
+      "name": "Pierna"
+    },
+    {
+      "id": "pantorrilla",
+      "name": "Pantorrilla"
+    }
+  ],
+  "muscles": [
+    {
+      "id": "pecho_general",
+      "group": "pecho",
+      "name": "Pecho (general)"
+    },
+    {
+      "id": "chest_clavicular",
+      "group": "pecho",
+      "name": "Cabeza clavicular"
+    },
+    {
+      "id": "chest_sternal",
+      "group": "pecho",
+      "name": "Cabeza esternal"
+    },
+    {
+      "id": "chest_fibras_medias",
+      "group": "pecho",
+      "name": "Fibras medias"
+    },
+    {
+      "id": "espalda_general",
+      "group": "espalda",
+      "name": "Espalda (general)"
+    },
+    {
+      "id": "espalda_dorsal",
+      "group": "espalda",
+      "name": "Dorsal ancho"
+    },
+    {
+      "id": "espalda_serrato",
+      "group": "espalda",
+      "name": "Serrato anterior"
+    },
+    {
+      "id": "espalda_romboides",
+      "group": "espalda",
+      "name": "Romboides"
+    },
+    {
+      "id": "espalda_baja",
+      "group": "espalda",
+      "name": "Espalda baja"
+    },
+    {
+      "id": "hombros_general",
+      "group": "hombros",
+      "name": "Hombros (general)"
+    },
+    {
+      "id": "hombros_anterior",
+      "group": "hombros",
+      "name": "Deltoides anterior"
+    },
+    {
+      "id": "hombros_medio",
+      "group": "hombros",
+      "name": "Deltoides medio"
+    },
+    {
+      "id": "hombros_posterior",
+      "group": "hombros",
+      "name": "Deltoides posterior"
+    },
+    {
+      "id": "trapecio_superior",
+      "group": "trapecio",
+      "name": "Trapecio superior"
+    },
+    {
+      "id": "trapecio_medio_bajo",
+      "group": "trapecio",
+      "name": "Trapecio medio/bajo"
+    },
+    {
+      "id": "biceps_anterior",
+      "group": "biceps",
+      "name": "Cabeza larga (parte anterior del brazo)"
+    },
+    {
+      "id": "biceps_corta",
+      "group": "biceps",
+      "name": "Porción corta"
+    },
+    {
+      "id": "triceps_general",
+      "group": "triceps",
+      "name": "Tríceps (general)"
+    },
+    {
+      "id": "triceps_larga",
+      "group": "triceps",
+      "name": "Cabeza larga"
+    },
+    {
+      "id": "triceps_lateral_medial",
+      "group": "triceps",
+      "name": "Cabezas lateral y medial"
+    },
+    {
+      "id": "antebrazo_braquial",
+      "group": "antebrazo",
+      "name": "Braquial"
+    },
+    {
+      "id": "antebrazo_braquiorradial",
+      "group": "antebrazo",
+      "name": "Braquiorradial"
+    },
+    {
+      "id": "core_recto",
+      "group": "core",
+      "name": "Recto abdominal"
+    },
+    {
+      "id": "core_oblicuos",
+      "group": "core",
+      "name": "Oblicuos"
+    },
+    {
+      "id": "core_lumbares",
+      "group": "core",
+      "name": "Estabilizadores lumbares"
+    },
+    {
+      "id": "pierna_cuadriceps",
+      "group": "pierna",
+      "name": "Cuádriceps"
+    },
+    {
+      "id": "pierna_gluteos",
+      "group": "pierna",
+      "name": "Glúteos"
+    },
+    {
+      "id": "pierna_isquio",
+      "group": "pierna",
+      "name": "Isquiotibiales"
+    },
+    {
+      "id": "pierna_aductores",
+      "group": "pierna",
+      "name": "Aductores (músculos internos del muslo)"
+    },
+    {
+      "id": "pantorrilla_gastro",
+      "group": "pantorrilla",
+      "name": "Gastrocnemio"
+    },
+    {
+      "id": "pantorrilla_soleo",
+      "group": "pantorrilla",
+      "name": "Sóleo"
+    }
+  ]
+}
