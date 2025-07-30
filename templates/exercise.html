@@ -7,7 +7,19 @@
   <li>Repeticiones: {{ exercise['REPETICIONES'] }}</li>
   <li>Peso: {{ exercise['PESO'] }}</li>
   <li>Descanso sugerido: {{ exercise['DESCANSO'] }} min</li>
-  <li>Target: {{ exercise['target'] }}</li>
+  <li>Músculos trabajados:
+    <ul>
+    {% for group, muscs in target_groups.items() %}
+      <li>{{ group }}
+        <ul>
+        {% for m in muscs %}
+          <li>{{ m }}</li>
+        {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+    </ul>
+  </li>
 </ul>
 <p>
   <img src="{{ url_for('static', filename='img/' + day + '/' + exercise['ID'] + '.png') }}" alt="Imagen del ejercicio" width="300">
