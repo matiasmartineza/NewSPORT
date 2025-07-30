@@ -187,6 +187,7 @@ def summary(day):
 
     muscles = []
     counts = {}
+    muscles_by_group = {}
     for i in done_idxs:
         if 0 <= i < len(exercises):
             ids = exercises[i].get('muscles', [])
@@ -197,13 +198,17 @@ def summary(day):
                 muscles.append(m['name'])
                 g_name = MUSCLE_GROUPS.get(m.get('group'), m.get('group'))
                 counts[g_name] = counts.get(g_name, 0) + 1
+                muscles_by_group.setdefault(g_name, set()).add(m['name'])
 
     m = total_time // 60
     s = total_time % 60
     time_str = f"{m}:{s:02}"
 
+    muscles_by_group = {g: sorted(list(ms)) for g, ms in muscles_by_group.items()}
+
     return render_template('summary.html', day=day, time=time_str,
                            percent=percent, muscles=muscles, counts=counts,
+                           muscles_by_group=muscles_by_group,
                            username=username)
 
 if __name__ == '__main__':
