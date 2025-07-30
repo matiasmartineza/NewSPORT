@@ -106,7 +106,43 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('rest').textContent = '';
     }
   }
+
+  const timer = document.querySelector('.timer');
+  if (timer) {
+    const saved = localStorage.getItem('timerPos');
+    if (saved) {
+      try {
+        const pos = JSON.parse(saved);
+        timer.style.left = pos.x + 'px';
+        timer.style.top = pos.y + 'px';
+        timer.style.right = 'auto';
+      } catch (e) {}
+    }
+    makeDraggable(timer);
+  }
 });
+
+function makeDraggable(el) {
+  let dragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
+  el.addEventListener('mousedown', e => {
+    dragging = true;
+    offsetX = e.clientX - el.offsetLeft;
+    offsetY = e.clientY - el.offsetTop;
+    el.style.right = 'auto';
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    el.style.left = (e.clientX - offsetX) + 'px';
+    el.style.top = (e.clientY - offsetY) + 'px';
+  });
+  document.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    localStorage.setItem('timerPos', JSON.stringify({x: el.offsetLeft, y: el.offsetTop}));
+  });
+}
 
 let restInterval;
 function startRest(seconds) {
