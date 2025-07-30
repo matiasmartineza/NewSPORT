@@ -1,6 +1,9 @@
 # Rutina de Ejercicios
 
 Aplicación web sencilla para visualizar y marcar como realizados los ejercicios de la rutina definida en `rutina.json`.
+Los ejercicios ahora referencian los músculos trabajados mediante IDs que se
+describen en `muscles.json`. Esto permite agruparlos por grupos musculares en el
+resumen.
 
 ## Requisitos
 
@@ -27,8 +30,9 @@ La página muestra un contador con el tiempo total transcurrido y botones para i
 
 Al finalizar la rutina pulsa **Finalizar Rutina**. Se mostrará una pantalla de
 resumen con tu nombre, el tiempo invertido y el porcentaje completado junto a
-un gráfico de los grupos musculares trabajados. El gráfico incluye su leyenda
-para una lectura clara y está generado con Chart.js.
+un gráfico de los grupos musculares trabajados. Gracias al catálogo de
+músculos se clasifican automáticamente por grupo muscular. El gráfico incluye
+su leyenda para una lectura clara y está generado con Chart.js.
 
 No es necesario instalar nada adicional para el gráfico ya que Chart.js se
 carga desde una CDN.

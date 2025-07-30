@@ -25,14 +25,32 @@ app.jinja_env.filters['slugify'] = slugify
 STATE_FILE = 'state.txt'
 STATE_LOCK = FileLock(STATE_FILE + '.lock')
 ROUTINE_FILE = 'rutina.json'
+MUSCLES_FILE = 'muscles.json'
 
 # Load routine data
 with open(ROUTINE_FILE, 'r', encoding='utf-8') as f:
     ROUTINES = json.load(f)
 
+# Load muscles catalog
+with open(MUSCLES_FILE, 'r', encoding='utf-8') as f:
+    MUSCLES_DATA = json.load(f)
+
+MUSCLE_GROUPS = {g['id']: g['name'] for g in MUSCLES_DATA.get('muscleGroups', [])}
+MUSCLES = {m['id']: m for m in MUSCLES_DATA.get('muscles', [])}
+
 # Ensure days 1-4 exist
 for d in ["1", "2", "3", "4"]:
     ROUTINES.setdefault(d, [])
+
+def group_muscles(ids):
+    groups = {}
+    for mid in ids:
+        m = MUSCLES.get(mid)
+        if not m:
+            continue
+        g_name = MUSCLE_GROUPS.get(m.get('group'), m.get('group'))
+        groups.setdefault(g_name, []).append(m['name'])
+    return groups
 
 def load_state():
     with STATE_LOCK:
@@ -139,8 +157,10 @@ def exercise_view(day, idx):
         save_state()
         return redirect(url_for('day_view', day=day))
     done = user_state.get(day, {}).get(str(idx), False)
+    target_groups = group_muscles(exercise.get('muscles', []))
     return render_template('exercise.html', day=day, idx=idx, exercise=exercise,
-                           done=done, show_timer=True)
+                           done=done, show_timer=True,
+                           target_groups=target_groups)
 
 @app.route('/summary/<day>', methods=['GET', 'POST'])
 def summary(day):
@@ -169,9 +189,14 @@ def summary(day):
     counts = {}
     for i in done_idxs:
         if 0 <= i < len(exercises):
-            target = exercises[i].get('target', 'Desconocido')
-            muscles.append(target)
-            counts[target] = counts.get(target, 0) + 1
+            ids = exercises[i].get('muscles', [])
+            for mid in ids:
+                m = MUSCLES.get(mid)
+                if not m:
+                    continue
+                muscles.append(m['name'])
+                g_name = MUSCLE_GROUPS.get(m.get('group'), m.get('group'))
+                counts[g_name] = counts.get(g_name, 0) + 1
 
     m = total_time // 60
     s = total_time % 60
