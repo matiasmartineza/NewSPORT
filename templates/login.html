@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Ingresa tu nombre</h1>
+<h1>¡Bienvenido!</h1>
+<p>Para empezar, por favor escribe tu nombre:</p>
 <form method="post" action="{{ url_for('index') }}">
   <input type="text" name="username" required>
-  <button class="btn" type="submit">Entrar</button>
+  <button class="btn" type="submit">Comenzar</button>
 </form>
 {% endblock %}

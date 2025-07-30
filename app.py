@@ -11,6 +11,7 @@ app.secret_key = 'change-me'
 # Make the current username available in every template
 @app.context_processor
 def inject_username():
+    """Expose the display name to all templates."""
     return {'username': session.get('username')}
 
 def slugify(value: str) -> str:
@@ -82,13 +83,15 @@ STATE = load_state()
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        username = slugify(request.form.get('username', ''))
-        if username:
-            session['username'] = username
+        raw_name = request.form.get('username', '').strip()
+        if raw_name:
+            session['username'] = raw_name
+            session['user_id'] = slugify(raw_name)
         return redirect(url_for('index'))
 
     username = session.get('username')
-    if not username:
+    user_id = session.get('user_id')
+    if not user_id:
         return render_template('login.html')
 
     days = ["1", "2", "3", "4"]
@@ -96,10 +99,10 @@ def index():
 
 @app.route('/day/<day>', methods=['GET'])
 def day_view(day):
-    username = session.get('username')
-    if not username:
+    user_id = session.get('user_id')
+    if not user_id:
         return redirect(url_for('index'))
-    user_state = get_user_state(username)
+    user_state = get_user_state(user_id)
     exercises = ROUTINES.get(day, [])
     done = user_state.get(day, {})
     return render_template('day.html', day=day, exercises=exercises, done=done,
@@ -109,14 +112,15 @@ def day_view(day):
 def logout():
     """Clear user session and redirect to login."""
     session.pop('username', None)
+    session.pop('user_id', None)
     return redirect(url_for('index'))
 
 @app.route('/toggle/<day>/<int:idx>', methods=['POST'])
 def toggle(day, idx):
-    username = session.get('username')
-    if not username:
+    user_id = session.get('user_id')
+    if not user_id:
         return ('', 400)
-    user_state = get_user_state(username)
+    user_state = get_user_state(user_id)
     state_day = user_state.setdefault(day, {})
     data = request.get_json(silent=True) or {}
     value = data.get('state')
@@ -133,20 +137,20 @@ def toggle(day, idx):
 @app.route('/reset/<day>', methods=['POST'])
 def reset_day(day):
     """Clear the saved state for the given day."""
-    username = session.get('username')
-    if not username:
+    user_id = session.get('user_id')
+    if not user_id:
         return ('', 400)
-    user_state = get_user_state(username)
+    user_state = get_user_state(user_id)
     user_state[day] = {}
     save_state()
     return ('', 204)
 
 @app.route('/exercise/<day>/<int:idx>', methods=['GET', 'POST'])
 def exercise_view(day, idx):
-    username = session.get('username')
-    if not username:
+    user_id = session.get('user_id')
+    if not user_id:
         return redirect(url_for('index'))
-    user_state = get_user_state(username)
+    user_state = get_user_state(user_id)
     exercises = ROUTINES.get(day, [])
     if idx < 0 or idx >= len(exercises):
         return redirect(url_for('day_view', day=day))
@@ -165,11 +169,12 @@ def exercise_view(day, idx):
 @app.route('/summary/<day>', methods=['GET', 'POST'])
 def summary(day):
     """Show summary of completed exercises for the given day."""
+    user_id = session.get('user_id')
     username = session.get('username')
-    if not username:
+    if not user_id:
         return redirect(url_for('index'))
     # Reset user progress after finishing the routine
-    clear_user_state(username)
+    clear_user_state(user_id)
     exercises = ROUTINES.get(day, [])
     done_param = request.values.get('done', '')
     time_param = request.values.get('time', '0')
